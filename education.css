@@ -1,0 +1,214 @@
+/*--------------------------------------general------------------------------------------*/
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #80c0ff, #2651e0, #3ea5e1, #0b0176);
+    background-size: 1000%;
+    animation: gradient-animation 30s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    background-image: url('Background.jpg'); /* Path to the image */
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image */
+    height: 100px; /* Height of the header */
+    color: white; /* Ensures text is visible on the background */
+    display: flex; /* Allows centering text */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    text-align: center; /* Aligns text within the header */
+
+    h1 {
+        font-size: 3em;
+        text-shadow: 5px 6px 5px #000000; /* Adds shadow for better readability */
+    }
+
+
+    /* Responsive Design for Smaller Screens */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2em; /* Slightly smaller font size */
+            text-shadow: 5px 6px 5px #000000; /* Adds shadow for better readability */
+        }
+
+        p {
+            font-size: 1em; /* Adjust font size for smaller screens */
+        }
+    }
+
+    /* Responsive Design for Very Small Screens (e.g., phones) */
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.5em; /* Smaller font size */
+            text-shadow: 5px 6px 5px #000000; /* Adds shadow for better readability */
+        }
+
+        p {
+            font-size: 0.9em; /* Smaller font size */
+        }
+
+        header {
+            margin-top: 30px; /* Adjust spacing for smaller devices */
+        }
+    }
+}
+
+.top-border {
+    padding: 1px;
+    background-color: white;
+}
+
+nav {
+    position: sticky;
+    top: 0; /* Sticks to the top when scrolling */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+    background-color: #000148;
+}
+
+nav ul li {
+    margin: 0px 10px;
+    padding: 5px 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 15px;
+    font-size: 18px;
+    color: white; 
+    transition: all 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(2);
+}
+
+.bottom-border {
+    padding: 1px;
+    background-color: white;
+}
+
+.back-to-main {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #000148; /* Blue background */
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.1s ease;
+}
+
+.back-to-main:hover {
+    background-color: white;
+    color: #000148;
+    border: 2px solid #000148;
+}
+
+#Follow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.follow-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
+    text-align: justify; /* Center text */
+    h2 { font-size: 25px; color: white; }
+}
+
+.social-media-icons {
+    display: flex;
+    align-items: center; /* Centers text vertically */
+    justify-content: center;
+    text-align: justify; /* Center text */
+    gap: 40px;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: white; /* Set default icon color */
+    font-size: 40px; /* Icon size */
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #000148; /* LinkedIn blue color or any color for hover */
+    transition: color 0.01s ease;
+}
+
+/*--------------------------------------education.html------------------------------------------*/
+
+#columns {
+    max-width: 100%; 
+    display: flex; /* Arrange items in a row */
+    align-items: center; /* Align items vertically */
+}
+
+.column1-content {
+    margin: 50px /* Top */ 25px /* Right */ 50px /* Bottom */ 50px /* Left */;
+    padding: 30px;
+    display: column; /* Arrange items in a row */
+    border: 3px solid #000148;
+    border-radius: 25px;
+    h2 { font-size: 30px; color: white;}
+    p { font-size: 16px; color: white;}
+}
+
+.column2-content {
+    margin: 50px /* Top */ 25px /* Right */ 50px /* Bottom */ 25px /* Left */;
+    padding: 30px;
+    display: column; /* Arrange items in a row */
+    border: 3px solid #000148;
+    border-radius: 25px;
+    h2 { font-size: 30px; color: white;}
+    p { font-size: 16px; color: white;}
+}
+
+.column3-content {
+    margin: 50px /* Top */ 50px /* Right */ 50px /* Bottom */ 50px /* Left */;
+    padding: 30px;
+    display: column; /* Arrange items in a row */
+    border: 3px solid #000148;
+    border-radius: 25px;
+    h2 { font-size: 30px; color: white;}
+    p { font-size: 16px; color: white;}
+}
