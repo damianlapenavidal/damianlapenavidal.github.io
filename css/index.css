@@ -22,7 +22,7 @@ body {
 }
 
 header {
-    background-image: url('Background.jpg'); /* Path to the image */
+    background-image: url('../img/background.jpg'); /* Path to the image */
     background-size: cover; /* Ensures the image covers the entire header */
     background-position: center; /* Centers the image */
     height: 125px; /* Height of the header */
