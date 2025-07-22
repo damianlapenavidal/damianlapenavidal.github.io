@@ -158,21 +158,25 @@ nav ul li a:hover {
     border-bottom: 3px solid #000148;
     display: flex; /* Arrange items in a row */
     align-items: center; /* Align items vertically */
+    /*background-color: rgba(0,0,0,0.1);*/
 }
 
 .welcome-content {
     flex: 1; /* Allow the text to take up remaining space */
     margin: 0px 50px auto;
-    h2 { font-size: 30px; color: white; }
-    p { font-size: 16px; color: white;}
+    h2 { font-size: 50px; color: white; margin-bottom: 10px; /* reduce space below the title */}
+    p { font-size: 18px; color: white; margin-top: 0; /* remove space above the paragraph */}
+    /*background-color: rgba(255,255,255,0.1);*/
 }
 
 .welcome-image img {
-    width: 200px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Optional: make the image circular */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a shadow */
-    margin: 0;
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* ensures image fills the square without distortion and maintains aspect ratio by cropping the overflow (not stretching)*/
+    object-position: 90% top; /* focus more on the upper part */
+    border-radius: 50%; /* optional: removes rounded edges */
+    margin-top: 50px;
+    /*background-color: rgba(255,0,0,0.1);*/
 }
 
 #paragraph1 {
@@ -183,26 +187,19 @@ nav ul li a:hover {
     align-items: center; /* Align items vertically */
 }
 
-.paragraph1-content {
-    flex: 1; /* Allow the text to take up remaining space */
-    justify-content: center;
-    margin: 0px 45px auto;
-    h2 { font-size: 40px; color: white; }
+.in-progress-image {
+    margin: 0px 45px;
+    width: 800px;
+    height: 410px;
+    overflow: hidden;
+    position: relative;
 }
 
-#paragraph1 {
-    max-width: 100%;
-    margin: 0px 300px 0px 300px;
-    padding: 0px;
-    display: flex; /* Arrange items in a row */
-    align-items: center; /* Align items vertically */
-}
-
-.paragraph1-content {
-    flex: 1; /* Allow the text to take up remaining space */
-    justify-content: center;
-    margin: 0px 45px auto;
-    h2 { font-size: 40px; color: white; }
+.in-progress-image img {
+    width: 800px;
+    height: 450px;
+    object-fit: cover;
+    position: absolute;
 }
 
 #paragraph2 {
@@ -222,3 +219,12 @@ nav ul li a:hover {
     p { font-size: 16px; color: white;}
 }
 
+.follow-content.glow-effect h2 {
+  animation: glow 2s ease-in-out;
+}
+
+@keyframes glow {
+  0%   { text-shadow: 0 0 0 white; }
+  50%  { text-shadow: 0 0 20px white; }
+  100% { text-shadow: 0 0 0 white; }
+}
