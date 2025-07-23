@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(120deg, #80c0ff, #2651e0, #3ea5e1, #0b0176, #80c0ff, #2651e0, #3ea5e1, #0b0176);
-    background-size: 1000%;
+    background-size: 250%;
     animation: gradient-animation 60s ease infinite;
 }
 
@@ -13,11 +13,6 @@ body {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }
 
 /*--------------------------------------Header------------------------------------------*/
