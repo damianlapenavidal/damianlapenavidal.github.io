@@ -1,0 +1,423 @@
+/* ========== BASE / RESET ========== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========== HEADER ========== */
+
+header {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 1rem;
+    min-height: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.6);
+    margin: 0;
+    color: white;
+}
+
+/* ========== NAVIGATION ========== */
+
+.nav-border {
+    height: 1px;
+    background-color: #1e293b;
+    width: 100%;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #0f172a;
+    border-bottom: 1px solid #1e293b;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 0.5rem 1.25rem;
+    font-size: clamp(0.9rem, 2vw, 1.125rem);
+    color: #94a3b8;
+    border-radius: 100vmax;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #5eead4;
+    background: rgba(94, 234, 212, 0.08);
+}
+
+/* ========== SECTIONS (shared) ========== */
+
+.section {
+    scroll-margin-top: 80px;
+    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    text-align: center;
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    color: white;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #5eead4;
+    margin: 0.75rem auto 0;
+    border-radius: 2px;
+}
+
+/* ========== WELCOME ========== */
+
+#welcome {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #1e293b;
+}
+
+.welcome-content {
+    flex: 1 1 300px;
+    min-width: 250px;
+}
+
+.welcome-content h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.welcome-content p {
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    margin-bottom: 1rem;
+    color: #cbd5e1;
+}
+
+.welcome-image img {
+    width: clamp(150px, 25vw, 250px);
+    height: clamp(150px, 25vw, 250px);
+    object-fit: cover;
+    object-position: 90% top;
+    border-radius: 50%;
+    display: block;
+    border: 3px solid #1e293b;
+}
+
+.inline-link {
+    color: #5eead4;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.inline-link:hover {
+    border-bottom-color: #5eead4;
+}
+
+/* ========== CARDS (education + projects shared) ========== */
+
+.card {
+    padding: clamp(1rem, 2vw, 2rem);
+    border: 1px solid #1e293b;
+    border-radius: clamp(0.75rem, 1.5vw, 1rem);
+    background-color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+    border-color: #334155;
+    transform: translateY(-2px);
+}
+
+.card h3 {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+    color: white;
+}
+
+.card p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+    color: #94a3b8;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Education: 3-column row */
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+.card-row .card {
+    flex: 1 1 250px;
+    max-width: 350px;
+    align-items: center;
+}
+
+/* Projects: 2x2 grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.card-grid .card {
+    text-align: left;
+}
+
+/* ========== EXPERIENCE ========== */
+
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+.experience-box {
+    display: flex;
+    border: 1px solid #1e293b;
+    border-radius: clamp(0.75rem, 1.5vw, 1rem);
+    background-color: #1e293b;
+    padding: clamp(1rem, 2vw, 2rem);
+    max-width: 100%;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.experience-box:hover {
+    border-color: #334155;
+    transform: translateY(-2px);
+}
+
+.experience-box.left {
+    justify-content: flex-start;
+    margin-left: clamp(0.5rem, 5vw, 5%);
+    margin-right: auto;
+}
+
+.experience-box.right {
+    justify-content: flex-end;
+    margin-right: clamp(0.5rem, 5vw, 5%);
+    margin-left: auto;
+}
+
+.experience-content {
+    max-width: 800px;
+    text-align: left;
+}
+
+.experience-content h3 {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+    color: white;
+}
+
+.experience-content p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+    color: #94a3b8;
+}
+
+.experience-content .date {
+    color: #5eead4;
+    font-style: italic;
+}
+
+/* ========== ABOUT ME (circles) ========== */
+
+.circle-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(1rem, 4vw, 3rem);
+    padding-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.circle-card {
+    flex: 0 1 250px;
+    aspect-ratio: 1 / 1;
+    max-width: 280px;
+    min-width: 180px;
+    padding: clamp(1rem, 4vw, 2rem);
+    border: 1px solid #1e293b;
+    border-radius: 50%;
+    background-color: #1e293b;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.circle-card:hover {
+    border-color: #334155;
+    transform: translateY(-2px);
+}
+
+.circle-card h3 {
+    font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.circle-card p {
+    font-size: clamp(0.95rem, 2vw, 1.125rem);
+    margin: 0;
+    color: #94a3b8;
+}
+
+/* ========== CONNECT ========== */
+
+#connect {
+    text-align: center;
+    max-width: 100%;
+    padding-top: 0;
+}
+
+.connect-content h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 6vw, 2.5rem);
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #5eead4;
+}
+
+/* ========== GLOW ANIMATION ========== */
+
+.connect-content.glow-effect h2 {
+    animation: glow 2s ease-in-out;
+}
+
+@keyframes glow {
+    0%   { text-shadow: 0 0 0 #5eead4; }
+    50%  { text-shadow: 0 0 20px #5eead4; }
+    100% { text-shadow: 0 0 0 #5eead4; }
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+    #welcome {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .welcome-image img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .social-media-icons {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .experience-box.left,
+    .experience-box.right {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-content p {
+        font-size: 0.9rem;
+    }
+
+    .connect-content h2 {
+        font-size: 1.25rem;
+    }
+
+    nav ul li a {
+        font-size: 0.95rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
