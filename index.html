@@ -11,6 +11,16 @@
 </head>
 <body>
 
+    <!-- CONSTRUCTION BANNER -->
+    <div id="construction-banner" class="banner-overlay">
+        <div class="banner">
+            <i class="fas fa-wrench banner-icon"></i>
+            <h2>Under Construction</h2>
+            <p>This site is still being updated. Some content may be incomplete.</p>
+            <button id="banner-close" class="banner-btn">Got it!</button>
+        </div>
+    </div>
+
     <!-- HEADER -->
     <header>
         <h1>Damian Lapena Vidal</h1>
@@ -23,6 +33,9 @@
             <span></span>
             <span></span>
         </button>
+        <a href="Damian_Lapena_Vidal_Resume.pdf" download class="resume-btn" aria-label="Download Resume">
+            <i class="fas fa-download"></i> Resume
+        </a>
         <div class="nav-border"></div>
         <ul id="main-nav-list">
             <li><a href="#welcome">Home</a></li>
@@ -60,47 +73,74 @@
         <div class="card-row">
             <div class="card">
                 <h3>University of Rhode Island</h3>
-                <p>Bachelor of Science in Computer Engineering</p>
-                <p>Expected Graduation May 2027</p>
+                <button class="card-expand" aria-label="Show details">+</button>
+                <div class="card-detail" hidden>
+                    <p>B.S. Computer Engineering</p>
+                    <p>GPA: 4.0/4.0</p>
+                    <p>Expected Graduation: May 2027</p>
+                </div>
             </div>
             <div class="card">
-                <h3>Winthrop High School</h3>
-                <p>...</p>
+                <h3>Scholarships</h3>
+                <button class="card-expand" aria-label="Show details">+</button>
+                <div class="card-detail" hidden>
+                    <p>URI Presidential Scholarship</p>
+                    <p>Subramaniam Family Scholarship</p>
+                    <p>C &amp; W Eckman Scholarship</p>
+                    <p>Dr. &amp; Mrs. E. Eddy Scholarship</p>
+                    <p>Barbara A. Woods Memorial Scholarship</p>
+                </div>
             </div>
             <div class="card">
-                <h3>Colegio La Concepción</h3>
-                <p>...</p>
+                <h3>Coursework</h3>
+                <button class="card-expand" aria-label="Show details">+</button>
+                <div class="card-detail" hidden>
+                    <p>Machine Learning (Python/Scikit-Learn)</p>
+                    <p>Data Structures &amp; Algorithms (C++)</p>
+                    <p>Electronics I (LTSpice)</p>
+                    <p>Linear Circuit Theory (MATLAB)</p>
+                    <p>Digital Circuit Design (NI Multisim)</p>
+                    <p>Digital Design with FPGAs (VHDL)</p>
+                    <p>Computer Architecture</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- MODAL -->
+    <div id="card-modal" class="modal-overlay" hidden>
+        <div class="modal">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <h3 class="modal-title"></h3>
+            <div class="modal-body"></div>
+        </div>
+    </div>
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
         <h2 class="section-title">Projects</h2>
         <div class="card-grid">
             <div class="card">
-                <h3>Project 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula,
-                    justo nec faucibus luctus, lorem mauris varius orci, nec volutpat risus erat
-                    in libero.</p>
+                <h3>AI Chatbot</h3>
+                <p class="date">URI Enrollment Services | Nov 2025 - Present</p>
+                <p>Building a Retrieval-Augmented Generation (RAG) chatbot using Python and
+                    LangChain on a team of four, addressing a large volume of family and
+                    student inquiries for Enrollment Services.</p>
             </div>
             <div class="card">
-                <h3>Project 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula,
-                    justo nec faucibus luctus, lorem mauris varius orci, nec volutpat risus erat
-                    in libero.</p>
+                <h3>DigiSign</h3>
+                <p class="date">HackHarvard '25 | Oct 2025</p>
+                <p>JavaScript-based e-signature capture tool that tracks a user's finger via
+                    webcam for secure payment transactions. Built with React, Node.js, Google
+                    Gemini API, and Stripe. Deployed with Cloudflare. Delivered as a functional
+                    MVP within the 36-hour hackathon deadline.</p>
             </div>
             <div class="card">
-                <h3>Project 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula,
-                    justo nec faucibus luctus, lorem mauris varius orci, nec volutpat risus erat
-                    in libero.</p>
-            </div>
-            <div class="card">
-                <h3>Project 4</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula,
-                    justo nec faucibus luctus, lorem mauris varius orci, nec volutpat risus erat
-                    in libero.</p>
+                <h3>Non-Linear Circuit Analysis</h3>
+                <p class="date">Electronics I Lab | Oct 2025</p>
+                <p>Designed and tested a BJT amplifier to characterize non-linear signal
+                    distortion. Used oscilloscope FFT for frequency domain analysis and
+                    validated breadboard results against LTspice simulations.</p>
             </div>
         </div>
     </section>
@@ -108,45 +148,64 @@
     <!-- EXPERIENCE -->
     <section id="experience" class="section">
         <h2 class="section-title">Experience</h2>
-        <div class="experience-timeline">
-            <div class="experience-box left">
-                <div class="experience-content">
-                    <h3>Undergraduate Research Assistant at the Integrated Circuits Design Lab</h3>
-                    <p class="date">September 2024 - Present</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula,
-                        justo nec faucibus luctus, lorem mauris varius orci, nec volutpat risus erat
-                        in libero. Vestibulum ut imperdiet arcu. Sed at diam sit amet sapien posuere
-                        finibus.</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Quantum Technologies Club | Founder &amp; President</h3>
+                    <p class="date">February 2026 - Present</p>
+                    <p>Founded URI's first student organization dedicated to quantum
+                        technology. Leading a student executive board and connecting with
+                        experts from industry and academia to invite guest speakers and
+                        expose students to real-world careers.</p>
                 </div>
             </div>
-            <div class="experience-box right">
-                <div class="experience-content">
-                    <h3>College of Engineering Connect Program Leader</h3>
-                    <p class="date">September 2024 - December 2024</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula,
-                        justo nec faucibus luctus, lorem mauris varius orci, nec volutpat risus erat
-                        in libero. Vestibulum ut imperdiet arcu. Sed at diam sit amet sapien posuere
-                        finibus.</p>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>QuLearnLabs Ambassador</h3>
+                    <p class="date">February 2026 - Present</p>
+                    <p>Advancing QuLearnLabs' mission to expand quantum literacy across
+                        universities and helping students discover opportunities in the
+                        quantum computing space.</p>
                 </div>
             </div>
-            <div class="experience-box left">
-                <div class="experience-content">
-                    <h3>Undergraduate Teaching Assistant</h3>
-                    <p class="date">September 2024 - December 2024</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula,
-                        justo nec faucibus luctus, lorem mauris varius orci, nec volutpat risus erat
-                        in libero. Vestibulum ut imperdiet arcu. Sed at diam sit amet sapien posuere
-                        finibus.</p>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Student Technician | URI IT Services</h3>
+                    <p class="date">January 2026 - Present</p>
+                    <p>Using Q-SYS to monitor classroom tech across campus. First point of
+                        contact for professors facing technical issues, providing on-site fixes
+                        or remote solutions. Handling hands-on hardware work from swapping
+                        projectors to replacing cable infrastructure.</p>
                 </div>
             </div>
-            <div class="experience-box right">
-                <div class="experience-content">
-                    <h3>Spanish Tutor</h3>
-                    <p class="date">September 2024 - December 2024</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula,
-                        justo nec faucibus luctus, lorem mauris varius orci, nec volutpat risus erat
-                        in libero. Vestibulum ut imperdiet arcu. Sed at diam sit amet sapien posuere
-                        finibus.</p>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Hack@URI Organizer</h3>
+                    <p class="date">June 2025 - Present</p>
+                    <p>Helping plan, coordinate, and execute a major tech event at URI.
+                        Collaborating with teams to manage expenses, organize reimbursements,
+                        and support sponsors. Attending hackathons like HackHarvard to gather
+                        insights for Hack@URI.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Quantum Computing Program | QuLearnLabs</h3>
+                    <p class="date">May 2025 - July 2025</p>
+                    <p>Learned principles of quantum mechanics relevant to computing,
+                        post-quantum cryptography, and quantum-safe protocols. Designed
+                        and simulated quantum circuits using IBM Qiskit SDK and built a
+                        capstone project implementing Grover's Algorithm with 4 qubits.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Research Assistant | URI Integrated Circuits Design Lab</h3>
+                    <p class="date">September 2024 - May 2025</p>
+                    <p>Assisted in PCB design using Altium Designer for cryogenic and
+                        radiation testing. Performed manual soldering and ran simulations
+                        in LTSpice. Developed a Python-based parameter optimization
+                        framework using PyTorch, NGSpice, and Weights &amp; Biases.</p>
                 </div>
             </div>
         </div>
@@ -157,26 +216,61 @@
         <h2 class="section-title">About Me</h2>
         <div class="circle-row">
             <div class="circle-card">
-                <h3>Interests</h3>
-                <p>...</p>
+                <h3>Languages</h3>
+                <button class="card-expand" aria-label="Show details">+</button>
+                <div class="card-detail" hidden>
+                    <p>Spanish (Native)</p>
+                    <p>English (Fluent/Bilingual)</p>
+                    <p>German (Basic)</p>
+                </div>
             </div>
             <div class="circle-card">
-                <h3>Hobbies</h3>
-                <p>...</p>
+                <h3>Interests</h3>
+                <button class="card-expand" aria-label="Show details">+</button>
+                <div class="card-detail" hidden>
+                    <p>Quantum Computing</p>
+                    <p>Integrated Circuit Design</p>
+                    <p>Machine Learning</p>
+                    <p>Full-Stack Development</p>
+                    <p>Python</p>
+                    <p>C++</p>
+                    <p>VHDL</p>
+                    <p>MATLAB</p>
+                    <p>PyTorch</p>
+                    <p>IBM Qiskit</p>
+                    <p>React</p>
+                    <p>Node.js</p>
+                </div>
             </div>
         </div>
         <div class="circle-row">
             <div class="circle-card">
-                <h3>Skills</h3>
-                <p>...</p>
+                <h3>Hobbies</h3>
+                <button class="card-expand" aria-label="Show details">+</button>
+                <div class="card-detail" hidden>
+                    <p>Soccer</p>
+                    <p>Travelling</p>
+                    <p>Skiing</p>
+                    <p>Reading</p>
+                </div>
             </div>
             <div class="circle-card">
-                <h3>Languages</h3>
-                <p>...</p>
+                <h3>Involvement</h3>
+                <button class="card-expand" aria-label="Show details">+</button>
+                <div class="card-detail" hidden>
+                    <p>IEEE Member</p>
+                    <p>SHPE Member</p>
+                    <p>URI Investment Club</p>
+                    <p>URI Pickleball Club</p>
+                </div>
             </div>
             <div class="circle-card">
-                <h3>Goals</h3>
-                <p>...</p>
+                <h3>Fun Fact</h3>
+                <button class="card-expand" aria-label="Show details">+</button>
+                <div class="card-detail" hidden>
+                    <p>Born in Spain</p>
+                    <p>Studying in Rhode Island</p>
+                </div>
             </div>
         </div>
     </section>

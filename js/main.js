@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Construction banner
+    const banner = document.getElementById('construction-banner');
+    const bannerClose = document.getElementById('banner-close');
+    if (banner && bannerClose) {
+        bannerClose.addEventListener('click', () => {
+            banner.classList.add('hidden');
+            banner.addEventListener('transitionend', () => banner.remove(), { once: true });
+        });
+    }
+
     const menuToggle = document.getElementById('menu-toggle');
     const navList = document.getElementById('main-nav-list');
     const navLinks = document.querySelectorAll('#main-nav a');
@@ -47,6 +57,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     sections.forEach(section => observer.observe(section));
+
+    // Education card modals
+    const modal = document.getElementById('card-modal');
+    if (modal) {
+        const modalTitle = modal.querySelector('.modal-title');
+        const modalBody = modal.querySelector('.modal-body');
+        const modalClose = modal.querySelector('.modal-close');
+
+        const openModal = (title, bodyHTML) => {
+            modalTitle.textContent = title;
+            modalBody.innerHTML = bodyHTML;
+            modal.hidden = false;
+            requestAnimationFrame(() => modal.classList.add('visible'));
+        };
+
+        const closeModal = () => {
+            modal.classList.remove('visible');
+            modal.addEventListener('transitionend', () => { modal.hidden = true; }, { once: true });
+        };
+
+        document.querySelectorAll('.card-expand').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const card = btn.closest('.card, .circle-card');
+                const title = card.querySelector('h3').textContent;
+                const detail = card.querySelector('.card-detail');
+                openModal(title, detail.innerHTML);
+            });
+        });
+
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+    }
 
     // Glow effect when clicking the "connect" inline link
     document.querySelectorAll('a[href="#connect"]').forEach(link => {
