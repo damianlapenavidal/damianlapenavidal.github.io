@@ -73,8 +73,7 @@
         <div class="card-row">
             <div class="card">
                 <h3>University of Rhode Island</h3>
-                <button class="card-expand" aria-label="Show details">+</button>
-                <div class="card-detail" hidden>
+                <div class="card-detail">
                     <p>B.S. Computer Engineering</p>
                     <p>GPA: 4.0/4.0</p>
                     <p>Expected Graduation: May 2027</p>
@@ -82,8 +81,7 @@
             </div>
             <div class="card">
                 <h3>Scholarships</h3>
-                <button class="card-expand" aria-label="Show details">+</button>
-                <div class="card-detail" hidden>
+                <div class="card-detail">
                     <p>URI Presidential Scholarship</p>
                     <p>Subramaniam Family Scholarship</p>
                     <p>C &amp; W Eckman Scholarship</p>
@@ -93,15 +91,14 @@
             </div>
             <div class="card">
                 <h3>Coursework</h3>
-                <button class="card-expand" aria-label="Show details">+</button>
-                <div class="card-detail" hidden>
+                <div class="card-detail">
                     <p>Machine Learning (Python/Scikit-Learn)</p>
                     <p>Data Structures &amp; Algorithms (C++)</p>
                     <p>Electronics I (LTSpice)</p>
                     <p>Linear Circuit Theory (MATLAB)</p>
                     <p>Digital Circuit Design (NI Multisim)</p>
                     <p>Digital Design with FPGAs (VHDL)</p>
-                    <p>Computer Architecture</p>
+                    <p>Computer Architecture (MIPS)</p>
                 </div>
             </div>
         </div>
@@ -121,11 +118,22 @@
         <h2 class="section-title">Projects</h2>
         <div class="card-grid">
             <div class="card">
-                <h3>AI Chatbot</h3>
-                <p class="date">URI Enrollment Services | Nov 2025 - Present</p>
-                <p>Building a Retrieval-Augmented Generation (RAG) chatbot using Python and
-                    LangChain on a team of four, addressing a large volume of family and
-                    student inquiries for Enrollment Services.</p>
+                <h3>Low-Power Voice Assistant for Kids</h3>
+                <p class="date">URI College of Engineering | Jun 2026 - Present</p>
+                <p>Voice assistant that helps kids learn new languages through natural spoken
+                    conversation with friendly AI characters. Engineering a real-time voice
+                    pipeline in async Python, streaming bidirectional audio between device
+                    and OpenAI Realtime API. Delivered a working prototype on Raspberry Pi 5,
+                    now moving toward a lower-power device for everyday use.</p>
+            </div>
+            <div class="card">
+                <h3>Campus AI Assistant</h3>
+                <p class="date">URI College of Engineering | Nov 2025 - Present</p>
+                <p>Retrieval-Augmented Generation (RAG) AI assistant automating responses to
+                    high-volume student inquiries. Built with Python, LangChain, and OpenAI
+                    APIs, with real-time web scraping pipelines using Firecrawl and
+                    BeautifulSoup4, containerized with Docker. Collaborating on a 4-person
+                    team. <a href="https://www.ele.uri.edu/chat/login" target="_blank" rel="noopener noreferrer" class="inline-link">Try it here!</a></p>
             </div>
             <div class="card">
                 <h3>DigiSign</h3>
@@ -133,7 +141,8 @@
                 <p>JavaScript-based e-signature capture tool that tracks a user's finger via
                     webcam for secure payment transactions. Built with React, Node.js, Google
                     Gemini API, and Stripe. Deployed with Cloudflare. Delivered as a functional
-                    MVP within the 36-hour hackathon deadline.</p>
+                    MVP within the 36-hour hackathon deadline.
+                    <a href="https://digisign-6e9.pages.dev/" target="_blank" rel="noopener noreferrer" class="inline-link">Check it out!</a></p>
             </div>
             <div class="card">
                 <h3>Non-Linear Circuit Analysis</h3>
@@ -151,12 +160,13 @@
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3>Quantum Technologies Club | Founder &amp; President</h3>
-                    <p class="date">February 2026 - Present</p>
-                    <p>Founded URI's first student organization dedicated to quantum
-                        technology. Leading a student executive board and connecting with
-                        experts from industry and academia to invite guest speakers and
-                        expose students to real-world careers.</p>
+                    <h3>AI Trainer - Electrical Engineering Expert | Handshake AI Fellowship</h3>
+                    <p class="date">May 2026 - June 2026</p>
+                    <p>Developed and evaluated domain-specific prompts to assess the
+                        performance of large language models (LLMs) in LTspice. Analyzed
+                        LLM-generated circuit designs and technical explanations for
+                        engineering accuracy, helping improve AI understanding of analog
+                        circuit design and simulation workflows.</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -172,10 +182,21 @@
                 <div class="timeline-content">
                     <h3>Student Technician | URI IT Services</h3>
                     <p class="date">January 2026 - Present</p>
-                    <p>Using Q-SYS to monitor classroom tech across campus. First point of
-                        contact for professors facing technical issues, providing on-site fixes
-                        or remote solutions. Handling hands-on hardware work from swapping
-                        projectors to replacing cable infrastructure.</p>
+                    <p>Using Q-SYS to monitor classroom tech across campus on the Classroom
+                        Media Assistance Team. First point of contact for 150+ faculty members
+                        facing technical issues, providing on-site fixes or remote solutions.
+                        Handling hands-on hardware work from swapping projectors to replacing
+                        cable infrastructure.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Quantum Technologies Club | Founder &amp; President</h3>
+                    <p class="date">October 2025 - Present</p>
+                    <p>Founded URI's first student organization dedicated to quantum
+                        technology. Leading a student executive board and connecting with
+                        experts from industry and academia to invite guest speakers and
+                        expose students to real-world careers.</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -183,8 +204,10 @@
                     <h3>Hack@URI Organizer</h3>
                     <p class="date">June 2025 - Present</p>
                     <p>Helping plan, coordinate, and execute a major tech event at URI.
-                        Collaborating with teams to manage expenses, organize reimbursements,
-                        and support sponsors. Attending hackathons like HackHarvard to gather
+                        Working with the tech team to build the hacker platform, website,
+                        and registration tools. Collaborating with the sponsorship team to
+                        manage expenses, organize reimbursements, and support sponsor
+                        follow-ups. Attending hackathons like HackHarvard to gather
                         insights for Hack@URI.</p>
                 </div>
             </div>
@@ -203,9 +226,38 @@
                     <h3>Research Assistant | URI Integrated Circuits Design Lab</h3>
                     <p class="date">September 2024 - May 2025</p>
                     <p>Assisted in PCB design using Altium Designer for cryogenic and
-                        radiation testing. Performed manual soldering and ran simulations
-                        in LTSpice. Developed a Python-based parameter optimization
-                        framework using PyTorch, NGSpice, and Weights &amp; Biases.</p>
+                        radiation testing. Performed manual soldering, ran simulations
+                        in LTSpice, and conducted electrical characterization by measuring
+                        Ids-Vds and Ids-Vgs curves. Developed a Python-based parameter
+                        optimization framework using PyTorch, NGSpice, and
+                        Weights &amp; Biases.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Spanish Tutor | University of Rhode Island</h3>
+                    <p class="date">September 2024 - May 2025</p>
+                    <p>Provided personalized one-on-one tutoring sessions to students of
+                        various proficiency levels, improving their listening, reading,
+                        writing, and speaking skills in Spanish.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Undergraduate Teaching Assistant | University of Rhode Island</h3>
+                    <p class="date">September 2024 - December 2024</p>
+                    <p>Assisted the professor in grading assignments for over 80 students
+                        in macroeconomics. Collaborated with the teaching team to enhance
+                        the course structure and improve student engagement.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Connect Program Leader | URI College of Engineering</h3>
+                    <p class="date">September 2024 - December 2024</p>
+                    <p>Mentored freshman engineering students, providing guidance on
+                        academic and extracurricular activities to support their transition
+                        and success in college.</p>
                 </div>
             </div>
         </div>
@@ -220,6 +272,8 @@
                 <button class="card-expand" aria-label="Show details">+</button>
                 <div class="card-detail" hidden>
                     <p>Spanish (Native)</p>
+                    <p>Valenciano (Native)</p>
+                    <p>Catalan (Native)</p>
                     <p>English (Fluent/Bilingual)</p>
                     <p>German (Basic)</p>
                 </div>
@@ -229,6 +283,7 @@
                 <button class="card-expand" aria-label="Show details">+</button>
                 <div class="card-detail" hidden>
                     <p>Quantum Computing</p>
+                    <p>Post-Quantum Cryptography</p>
                     <p>Integrated Circuit Design</p>
                     <p>Machine Learning</p>
                     <p>Full-Stack Development</p>
@@ -240,6 +295,17 @@
                     <p>IBM Qiskit</p>
                     <p>React</p>
                     <p>Node.js</p>
+                    <p>HTML/CSS</p>
+                </div>
+            </div>
+            <div class="circle-card">
+                <h3>Certifications</h3>
+                <button class="card-expand" aria-label="Show details">+</button>
+                <div class="card-detail" hidden>
+                    <p>AI-assisted Software Engineering for Quantum Computing and PQC [AISEQ]</p>
+                    <p>Python Online Course</p>
+                    <p>Microsoft Excel Online Course</p>
+                    <p>Microsoft Power BI Online Course</p>
                 </div>
             </div>
         </div>
@@ -270,6 +336,7 @@
                 <button class="card-expand" aria-label="Show details">+</button>
                 <div class="card-detail" hidden>
                     <p>Born in Spain</p>
+                    <p>Exchange year in the U.S. during high school</p>
                     <p>Studying in Rhode Island</p>
                 </div>
             </div>
