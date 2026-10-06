@@ -1,14 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Construction banner
-    const banner = document.getElementById('construction-banner');
-    const bannerClose = document.getElementById('banner-close');
-    if (banner && bannerClose) {
-        bannerClose.addEventListener('click', () => {
-            banner.classList.add('hidden');
-            banner.addEventListener('transitionend', () => banner.remove(), { once: true });
-        });
-    }
-
     const menuToggle = document.getElementById('menu-toggle');
     const navList = document.getElementById('main-nav-list');
     const navLinks = document.querySelectorAll('#main-nav a');
@@ -76,6 +66,17 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.remove('visible');
             modal.addEventListener('transitionend', () => { modal.hidden = true; }, { once: true });
         };
+
+        document.querySelectorAll('.card-clickable').forEach(card => {
+            const open = () => openModal(card.querySelector('h3').textContent, card.querySelector('.card-detail').innerHTML);
+            card.addEventListener('click', open);
+            card.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    open();
+                }
+            });
+        });
 
         document.querySelectorAll('.card-expand').forEach(btn => {
             btn.addEventListener('click', () => {

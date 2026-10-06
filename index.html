@@ -11,16 +11,6 @@
 </head>
 <body>
 
-    <!-- CONSTRUCTION BANNER -->
-    <div id="construction-banner" class="banner-overlay">
-        <div class="banner">
-            <i class="fas fa-wrench banner-icon"></i>
-            <h2>Under Construction</h2>
-            <p>This site is still being updated. Some content may be incomplete.</p>
-            <button id="banner-close" class="banner-btn">Got it!</button>
-        </div>
-    </div>
-
     <!-- HEADER -->
     <header>
         <h1>Damian Lapena Vidal</h1>
@@ -33,9 +23,6 @@
             <span></span>
             <span></span>
         </button>
-        <a href="Damian_Lapena_Vidal_Resume.pdf" download class="resume-btn" aria-label="Download Resume">
-            <i class="fas fa-download"></i> Resume
-        </a>
         <div class="nav-border"></div>
         <ul id="main-nav-list">
             <li><a href="#welcome">Home</a></li>
@@ -63,6 +50,14 @@
                 around and discover how my skills reflect my commitment to excellence and
                 lifelong learning.
             </p>
+            <p>
+                I am especially drawn to quantum computing and to AI systems that run from
+                embedded devices to the cloud, including enterprise applications. I aspire to
+                be a product engineer who connects the technology with the business side,
+                turning ideas into working products. As an international student, I value
+                diversity of thought, and I am looking for internships and research
+                opportunities in these areas.
+            </p>
             <p>Do not hesitate to <a href="#connect" class="inline-link">connect</a> with me!</p>
         </div>
     </section>
@@ -71,17 +66,30 @@
     <section id="education" class="section">
         <h2 class="section-title">Education</h2>
         <div class="card-row">
-            <div class="card">
+            <div class="card card-clickable" role="button" tabindex="0" aria-haspopup="dialog">
                 <h3>University of Rhode Island</h3>
-                <div class="card-detail">
+                <div class="card-summary">
+                    <p class="summary-main">B.S. Computer Engineering</p>
+                    <p>2023 - 2027</p>
+                </div>
+                <span class="card-hint" aria-hidden="true">+</span>
+                <div class="card-detail" hidden>
                     <p>B.S. Computer Engineering</p>
+                    <p>Minor in Math</p>
+                    <p>Certificate in AI/ML in Engineering Applications</p>
                     <p>GPA: 4.0/4.0</p>
+                    <p>Started: September 2023</p>
                     <p>Expected Graduation: May 2027</p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card card-clickable" role="button" tabindex="0" aria-haspopup="dialog">
                 <h3>Scholarships</h3>
-                <div class="card-detail">
+                <div class="card-summary">
+                    <p class="summary-main">5 Scholarships</p>
+                    <p>Merit &amp; named awards</p>
+                </div>
+                <span class="card-hint" aria-hidden="true">+</span>
+                <div class="card-detail" hidden>
                     <p>URI Presidential Scholarship</p>
                     <p>Subramaniam Family Scholarship</p>
                     <p>C &amp; W Eckman Scholarship</p>
@@ -89,15 +97,20 @@
                     <p>Barbara A. Woods Memorial Scholarship</p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card card-clickable" role="button" tabindex="0" aria-haspopup="dialog">
                 <h3>Coursework</h3>
-                <div class="card-detail">
-                    <p>Machine Learning (Python/Scikit-Learn)</p>
+                <div class="card-summary">
+                    <p class="summary-main">7 Key Courses</p>
+                    <p>Software, circuits &amp; hardware</p>
+                </div>
+                <span class="card-hint" aria-hidden="true">+</span>
+                <div class="card-detail" hidden>
+                    <p>Cloud Computing (AWS/Microsoft Azure)</p>
+                    <p>Computer Networks</p>
+                    <p>Machine Learning I &amp; II (Python/Scikit-Learn/PyTorch)</p>
                     <p>Data Structures &amp; Algorithms (C++)</p>
-                    <p>Electronics I (LTSpice)</p>
-                    <p>Linear Circuit Theory (MATLAB)</p>
-                    <p>Digital Circuit Design (NI Multisim)</p>
-                    <p>Digital Design with FPGAs (VHDL)</p>
+                    <p>Circuit Theory (MATLAB/LTSpice)</p>
+                    <p>Digital Computer Design (FPGA/VHDL)</p>
                     <p>Computer Architecture (MIPS)</p>
                 </div>
             </div>
@@ -117,39 +130,73 @@
     <section id="projects" class="section">
         <h2 class="section-title">Projects</h2>
         <div class="card-grid">
-            <div class="card">
+            <div class="card card-clickable" role="button" tabindex="0" aria-haspopup="dialog">
                 <h3>Low-Power Voice Assistant for Kids</h3>
-                <p class="date">URI College of Engineering | Jun 2026 - Present</p>
-                <p>Voice assistant that helps kids learn new languages through natural spoken
-                    conversation with friendly AI characters. Engineering a real-time voice
-                    pipeline in async Python, streaming bidirectional audio between device
-                    and OpenAI Realtime API. Delivered a working prototype on Raspberry Pi 5,
-                    now moving toward a lower-power device for everyday use.</p>
+                <p class="date"><span>URI College of Engineering</span> <span>Jun 2026 - Present</span></p>
+                <span class="card-hint" aria-hidden="true">+</span>
+                <div class="card-detail" hidden>
+                    <p>Voice assistant that helps kids learn new languages through natural spoken
+                        conversation with friendly AI characters. Engineering a real-time voice
+                        pipeline in async Python, streaming bidirectional audio between device
+                        and OpenAI Realtime API. Delivered a working prototype on Raspberry Pi 5,
+                        now moving toward a lower-power device for everyday use.</p>
+                </div>
             </div>
-            <div class="card">
+            <div class="card card-clickable" role="button" tabindex="0" aria-haspopup="dialog">
+                <h3>YQuantum 2026: QuEra Challenge</h3>
+                <p class="date"><span>Yale University</span> <span>Apr 2026</span></p>
+                <span class="card-hint" aria-hidden="true">+</span>
+                <div class="card-detail" hidden>
+                    <p>Quantum hackathon submission for the QuEra Challenge, exploring why a 1-qubit
+                        gate can be harder to implement than a 2-qubit gate. Built in Python and
+                        Jupyter notebooks with Bloqade, QuEra's quantum SDK.</p>
+                    <p><a href="https://github.com/jwoolnt/yquantum-2026-the-operators" target="_blank" rel="noopener noreferrer" class="inline-link">View on GitHub</a></p>
+                </div>
+            </div>
+            <div class="card card-clickable" role="button" tabindex="0" aria-haspopup="dialog">
+                <h3>Kalshi Weather Trading Automation</h3>
+                <p class="date"><span>Class Project</span> <span>Spring 2026</span></p>
+                <span class="card-hint" aria-hidden="true">+</span>
+                <div class="card-detail" hidden>
+                    <p>Python tooling for weather market analysis and trading automation on Kalshi.</p>
+                    <p><a href="https://github.com/damianlapenavidal/kalshi-AI-automated" target="_blank" rel="noopener noreferrer" class="inline-link">View on GitHub</a></p>
+                </div>
+            </div>
+            <div class="card card-clickable" role="button" tabindex="0" aria-haspopup="dialog">
                 <h3>Campus AI Assistant</h3>
-                <p class="date">URI College of Engineering | Nov 2025 - Present</p>
-                <p>Retrieval-Augmented Generation (RAG) AI assistant automating responses to
-                    high-volume student inquiries. Built with Python, LangChain, and OpenAI
-                    APIs, with real-time web scraping pipelines using Firecrawl and
-                    BeautifulSoup4, containerized with Docker. Collaborating on a 4-person
-                    team. <a href="https://www.ele.uri.edu/chat/login" target="_blank" rel="noopener noreferrer" class="inline-link">Try it here!</a></p>
+                <p class="date"><span>URI College of Engineering</span> <span>Nov 2025 - Present</span></p>
+                <span class="card-hint" aria-hidden="true">+</span>
+                <div class="card-detail" hidden>
+                    <p>Retrieval-Augmented Generation (RAG) AI assistant automating responses to
+                        high-volume student inquiries. Built with Python, LangChain, and OpenAI
+                        APIs, with real-time web scraping pipelines using Firecrawl and
+                        BeautifulSoup4, containerized with Docker. Collaborating on a 4-person
+                        team.</p>
+                </div>
             </div>
-            <div class="card">
+            <div class="card card-clickable" role="button" tabindex="0" aria-haspopup="dialog">
                 <h3>DigiSign</h3>
-                <p class="date">HackHarvard '25 | Oct 2025</p>
-                <p>JavaScript-based e-signature capture tool that tracks a user's finger via
-                    webcam for secure payment transactions. Built with React, Node.js, Google
-                    Gemini API, and Stripe. Deployed with Cloudflare. Delivered as a functional
-                    MVP within the 36-hour hackathon deadline.
-                    <a href="https://digisign-6e9.pages.dev/" target="_blank" rel="noopener noreferrer" class="inline-link">Check it out!</a></p>
+                <p class="date"><span>HackHarvard '25</span> <span>Oct 2025</span></p>
+                <span class="card-hint" aria-hidden="true">+</span>
+                <div class="card-detail" hidden>
+                    <p>JavaScript-based e-signature capture tool that tracks a user's finger via
+                        webcam for secure payment transactions. Built with React, Node.js, Google
+                        Gemini API, and Stripe. Deployed with Cloudflare. Delivered as a functional
+                        MVP within the 36-hour hackathon deadline.</p>
+                    <p><a href="https://digisign-6e9.pages.dev/" target="_blank" rel="noopener noreferrer" class="inline-link">Check it out!</a></p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Non-Linear Circuit Analysis</h3>
-                <p class="date">Electronics I Lab | Oct 2025</p>
-                <p>Designed and tested a BJT amplifier to characterize non-linear signal
-                    distortion. Used oscilloscope FFT for frequency domain analysis and
-                    validated breadboard results against LTspice simulations.</p>
+            <div class="card card-clickable" role="button" tabindex="0" aria-haspopup="dialog">
+                <h3>Quantum Computing Course Projects</h3>
+                <p class="date"><span>QuLearnLabs</span> <span>May 2025 - Jul 2025</span></p>
+                <span class="card-hint" aria-hidden="true">+</span>
+                <div class="card-detail" hidden>
+                    <p>Hands-on projects from QuLearnLabs' quantum computing program, covering quantum
+                        mechanics for computing, post-quantum cryptography, and quantum-safe protocols.
+                        Designed and simulated quantum circuits with IBM Qiskit, explored classical-quantum
+                        hybrid approaches, and built a capstone implementing Grover's Algorithm with 4 qubits.</p>
+                    <p><a href="https://github.com/damianlapenavidal/Quantum-Computing-Course-by-QuLearnLabs" target="_blank" rel="noopener noreferrer" class="inline-link">View on GitHub</a></p>
+                </div>
             </div>
         </div>
     </section>
@@ -171,11 +218,11 @@
             </div>
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3>QuLearnLabs Ambassador</h3>
-                    <p class="date">February 2026 - Present</p>
-                    <p>Advancing QuLearnLabs' mission to expand quantum literacy across
-                        universities and helping students discover opportunities in the
-                        quantum computing space.</p>
+                    <h3>Volunteer Ambassador | QuLearnLabs</h3>
+                    <p class="date">February 2026 - May 2026</p>
+                    <p>Volunteered to support QuLearnLabs' mission of expanding quantum
+                        literacy, sharing the company's programs with university students
+                        and helping them discover opportunities in quantum computing.</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -186,7 +233,8 @@
                         Media Assistance Team. First point of contact for 150+ faculty members
                         facing technical issues, providing on-site fixes or remote solutions.
                         Handling hands-on hardware work from swapping projectors to replacing
-                        cable infrastructure.</p>
+                        cable infrastructure. Working closely with a team of six to coordinate
+                        schedules and manage the ticketing system for all repairs.</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -207,30 +255,22 @@
                         Working with the tech team to build the hacker platform, website,
                         and registration tools. Collaborating with the sponsorship team to
                         manage expenses, organize reimbursements, and support sponsor
-                        follow-ups. Attending hackathons like HackHarvard to gather
+                        follow-ups. Networking with students, companies, and schools across
+                        the region. Attending hackathons like HackHarvard to gather
                         insights for Hack@URI.</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3>Quantum Computing Program | QuLearnLabs</h3>
-                    <p class="date">May 2025 - July 2025</p>
-                    <p>Learned principles of quantum mechanics relevant to computing,
-                        post-quantum cryptography, and quantum-safe protocols. Designed
-                        and simulated quantum circuits using IBM Qiskit SDK and built a
-                        capstone project implementing Grover's Algorithm with 4 qubits.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Research Assistant | URI Integrated Circuits Design Lab</h3>
+                    <h3>Undergraduate Research Assistant | URI Integrated Circuits Design Lab</h3>
                     <p class="date">September 2024 - May 2025</p>
                     <p>Assisted in PCB design using Altium Designer for cryogenic and
                         radiation testing. Performed manual soldering, ran simulations
                         in LTSpice, and conducted electrical characterization by measuring
                         Ids-Vds and Ids-Vgs curves. Developed a Python-based parameter
                         optimization framework using PyTorch, NGSpice, and
-                        Weights &amp; Biases.</p>
+                        finite-difference gradients, with Git/GitHub version control
+                        and Weights &amp; Biases experiment tracking.</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -255,7 +295,7 @@
                 <div class="timeline-content">
                     <h3>Connect Program Leader | URI College of Engineering</h3>
                     <p class="date">September 2024 - December 2024</p>
-                    <p>Mentored freshman engineering students, providing guidance on
+                    <p>Mentored 2 freshman engineering students, providing guidance on
                         academic and extracurricular activities to support their transition
                         and success in college.</p>
                 </div>
@@ -275,27 +315,29 @@
                     <p>Valenciano (Native)</p>
                     <p>Catalan (Native)</p>
                     <p>English (Fluent/Bilingual)</p>
-                    <p>German (Basic)</p>
+                    <p>German (Elementary)</p>
                 </div>
             </div>
             <div class="circle-card">
-                <h3>Interests/Skills</h3>
+                <h3>Interests</h3>
                 <button class="card-expand" aria-label="Show details">+</button>
                 <div class="card-detail" hidden>
+                    <p>Embedded &amp; Cloud AI</p>
+                    <p>Enterprise AI &amp; Business</p>
+                    <p>Product Engineering &amp; Startups</p>
                     <p>Quantum Computing</p>
-                    <p>Post-Quantum Cryptography</p>
-                    <p>Integrated Circuit Design</p>
-                    <p>Machine Learning</p>
-                    <p>Full-Stack Development</p>
-                    <p>Python</p>
-                    <p>C++</p>
-                    <p>VHDL</p>
-                    <p>MATLAB</p>
-                    <p>PyTorch</p>
-                    <p>IBM Qiskit</p>
-                    <p>React</p>
-                    <p>Node.js</p>
-                    <p>HTML/CSS</p>
+                </div>
+            </div>
+            <div class="circle-card">
+                <h3>Skills</h3>
+                <button class="card-expand" aria-label="Show details">+</button>
+                <div class="card-detail" hidden>
+                    <p><strong>AI &amp; Data:</strong> Python, PyTorch, Scikit-Learn, LangChain, OpenAI APIs, RAG</p>
+                    <p><strong>Cloud &amp; DevOps:</strong> AWS, Azure, Docker, Git/GitHub, Cloudflare</p>
+                    <p><strong>Embedded &amp; Hardware:</strong> C++, VHDL/FPGA, Raspberry Pi, Altium Designer, LTspice, MATLAB</p>
+                    <p><strong>Full-Stack:</strong> React, Node.js, JavaScript, HTML/CSS</p>
+                    <p><strong>Product &amp; Business:</strong> Rapid prototyping, MVP delivery, Excel, Power BI</p>
+                    <p><strong>Quantum:</strong> IBM Qiskit</p>
                 </div>
             </div>
             <div class="circle-card">
@@ -308,36 +350,23 @@
                     <p>Microsoft Power BI Online Course</p>
                 </div>
             </div>
-        </div>
-        <div class="circle-row">
             <div class="circle-card">
                 <h3>Hobbies</h3>
                 <button class="card-expand" aria-label="Show details">+</button>
                 <div class="card-detail" hidden>
-                    <p>Soccer</p>
-                    <p>Travelling</p>
-                    <p>Skiing</p>
-                    <p>Reading</p>
+                    <p><strong>Sports:</strong> Pickleball, padel, soccer, volleyball &amp; more</p>
+                    <p><strong>Outdoors:</strong> Skiing, hiking &amp; traveling to new places</p>
+                    <p><strong>On the side:</strong> Business &amp; economy books, podcasts, investing and languages</p>
                 </div>
             </div>
             <div class="circle-card">
                 <h3>Involvement</h3>
                 <button class="card-expand" aria-label="Show details">+</button>
                 <div class="card-detail" hidden>
-                    <p>Tau Beta Pi Engineering Honor Society Member</p>
-                    <p>IEEE Member</p>
-                    <p>SHPE Member</p>
-                    <p>URI Investment Club</p>
-                    <p>URI Pickleball Club</p>
-                </div>
-            </div>
-            <div class="circle-card">
-                <h3>Fun Fact</h3>
-                <button class="card-expand" aria-label="Show details">+</button>
-                <div class="card-detail" hidden>
-                    <p>Born in Spain</p>
-                    <p>Exchange year in the U.S. during high school</p>
-                    <p>Studying in Rhode Island</p>
+                    <p><strong>Leadership:</strong> Founder &amp; President of the Quantum Technologies Club; Computer Engineering Student Advisory Board (ABET Accreditation)</p>
+                    <p><strong>Honor Societies:</strong> Tau Beta Pi National Engineering Honor Society (Inducted Dec 2025); Phi Eta Sigma</p>
+                    <p><strong>Professional:</strong> IEEE; Society of Hispanic Professional Engineers (SHPE)</p>
+                    <p><strong>Clubs &amp; Sports:</strong> URI Investment Club, Pickleball Club, Outing Club, Rifle Club; Intramural Soccer</p>
                 </div>
             </div>
         </div>
